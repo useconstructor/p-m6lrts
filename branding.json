@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#FAFAFA",
+  "secondaryColor": "#F1F3F5",
+  "backgroundColor": "#FAFAFA",
+  "textColor": "#2C3E50",
+  "accentColor": "#FF6B5B",
+  "fontHeading": "Space Grotesk",
+  "fontBody": "Inter",
+  "borderRadius": "0.375rem",
+  "logoText": "Listwise",
+  "logoImageUrl": "https://vabacntbfcwhgkjqajcw.supabase.co/storage/v1/object/public/screenshots/projects/P-M6LRTS/logo.png",
+  "tone": "trustworthy"
+}

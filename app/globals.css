@@ -1,33 +1,18 @@
 @import "tailwindcss";
-
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  --color-background: oklch(1 0 0);
-  --color-foreground: oklch(0.145 0 0);
-  --color-card: oklch(1 0 0);
-  --color-card-foreground: oklch(0.145 0 0);
-  --color-primary: oklch(0.205 0 0);
-  --color-primary-foreground: oklch(0.985 0 0);
-  --color-secondary: oklch(0.97 0 0);
-  --color-secondary-foreground: oklch(0.205 0 0);
-  --color-muted: oklch(0.97 0 0);
-  --color-muted-foreground: oklch(0.556 0 0);
-  --color-accent: oklch(0.97 0 0);
-  --color-accent-foreground: oklch(0.205 0 0);
-  --color-destructive: oklch(0.577 0.245 27.325);
-  --color-border: oklch(0.922 0 0);
-  --color-input: oklch(0.922 0 0);
-  --color-ring: oklch(0.708 0 0);
-  --radius: 0.5rem;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif; --font-heading: var(--font-space), ui-sans-serif, system-ui, sans-serif;
+  --color-warm:#FAFAFA; --color-soft:#F1F3F5; --color-ink:#2C3E50; --color-slate:#617183; --color-coral:#FF6B5B; --color-coral-light:#ff9b90;
+  --color-background:#FAFAFA; --color-foreground:#2C3E50; --color-border:#dfe3e7; --color-primary:#FF6B5B; --color-primary-foreground:#fff;
+  --color-secondary:#F1F3F5; --color-secondary-foreground:#2C3E50; --color-muted:#F1F3F5; --color-muted-foreground:#617183; --color-accent:#F1F3F5; --color-accent-foreground:#2C3E50; --color-input:#dfe3e7; --color-ring:#FF6B5B; --radius:.375rem;
 }
-
-@layer base {
-  * {
-    border-color: var(--color-border);
-  }
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-  }
+@layer base { * { border-color:var(--color-border); } html { scroll-behavior:smooth; } body { background:#FAFAFA; color:#2C3E50; } button,a { cursor:pointer; } }
+@layer components {
+  .button-primary { @apply inline-flex items-center justify-center gap-2 rounded-md bg-coral px-5 py-2.5 text-sm font-bold text-white shadow-[0_8px_24px_rgba(255,107,91,.22)] transition hover:-translate-y-0.5 hover:shadow-lg; }
+  .eyebrow { @apply inline-flex items-center gap-2 rounded-full border border-coral/20 bg-coral/8 px-3 py-1.5 text-xs font-bold text-coral; }
+  .kicker { @apply mb-3 text-xs font-bold uppercase tracking-[.2em] text-coral; } .section { @apply px-5 py-24 sm:py-28 lg:px-8; } .section > * { @apply mx-auto max-w-7xl; }
+  .section h2 { @apply font-heading text-4xl font-bold leading-tight tracking-[-.04em] sm:text-5xl; } .section-heading { @apply flex flex-col justify-between gap-5 md:flex-row md:items-end; } .section-heading > p { @apply max-w-md leading-7 text-slate/65; }
+  .bento { @apply min-h-64 overflow-hidden rounded-xl border border-slate/10 bg-white p-7 shadow-[0_10px_40px_rgba(44,62,80,.05)]; } .bento h3 { @apply mt-5 font-heading text-2xl font-bold; } .bento p { @apply mt-3 text-sm leading-6 text-slate/65; }
+  .iconbox { @apply grid size-11 place-items-center rounded-md bg-coral/12 text-coral; } .iconbox svg { @apply size-5; }
+  .dashboard { @apply grid overflow-hidden rounded-xl border border-slate/10 bg-soft shadow-[0_25px_70px_rgba(44,62,80,.14)] sm:grid-cols-[150px_1fr]; } .dashboard aside { @apply hidden bg-ink p-5 sm:block; }
+  .carousel-button { @apply grid size-10 place-items-center rounded-full border border-slate/15 bg-white transition hover:border-coral hover:text-coral; } .carousel-button svg { @apply size-4; }
 }
